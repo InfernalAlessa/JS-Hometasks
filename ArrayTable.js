@@ -1,19 +1,23 @@
 const obj = [
-  arr1 = [1, 2, 3],
-  arr2 = [4, 5, 6],
-  arr3 = [7, 8, 9],
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
 ];
 
-function getSumRow(row){
+const prompt = require("prompt-sync")();
+let r = prompt("Enter index of the row: ");
+let c = prompt("Enter index of the column: ");
+
+function getSumRow(r){
 let SumRow = 0;
-obj[row].forEach((item) => (SumRow += item));
+obj[r].forEach((item) => (SumRow += item));
 return SumRow
 }
 
-function getSumColumn(arr, column) {
+function getSumColumn(arr, c) {
   let sumColumn = 0;
-  arr.forEach((item) => (sumColumn += item[column]));
+  arr.forEach((item) => (sumColumn += item[c]));
   return sumColumn;
 }
 
-console.log(`The summm in the selected column is ${getSumColumn(obj, 2)}, the summ in the selected row is ${getSumRow(0)}`);
+console.log(`The summm in the selected column is ${getSumColumn(obj, c)}, the summ in the selected row is ${getSumRow(r)}`);
