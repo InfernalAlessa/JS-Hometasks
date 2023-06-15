@@ -14,10 +14,10 @@ obj[r].forEach((item) => (SumRow += item));
 return SumRow
 }
 
-function getSumColumn(arr, c) {
+function getSumColumn(c) {
   let sumColumn = 0;
-  arr.forEach((item) => (sumColumn += item[c]));
+  obj.forEach((item) => (sumColumn += item[c]));
   return sumColumn;
 }
 
-console.log(`The summm in the selected column is ${getSumColumn(obj, c)}, the summ in the selected row is ${getSumRow(r)}`);
+console.log(`The summm in the selected column is ${getSumColumn(c)}, the summ in the selected row is ${getSumRow(r)}`);
