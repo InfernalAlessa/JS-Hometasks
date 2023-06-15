@@ -4,11 +4,11 @@ const obj = [
   arr3 = [7, 8, 9],
 ];
 
+function getSumRow(row){
 let SumRow = 0;
-arr1.forEach((item) => {
-    SumRow += item;
-  });
-
+obj[row].forEach((item) => (SumRow += item));
+return SumRow
+}
 
 function getSumColumn(arr, column) {
   let sumColumn = 0;
@@ -16,4 +16,4 @@ function getSumColumn(arr, column) {
   return sumColumn;
 }
 
-console.log(getSumColumn(obj, 1), SumRow);
+console.log(`The summm in the selected column is ${getSumColumn(obj, 2)}, the summ in the selected row is ${getSumRow(0)}`);
